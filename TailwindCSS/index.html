@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Морковка</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 ">
+    <header class="bg-white shadow">
+        <nav class="max-w-screen-xl m-auto  px-6 py-3 flex justify-between">
+            <a href="#" class="font-medium">&#9733; BrendName</a>
+            <div class="flex space-x-4 hidden sm:block">
+                <a href="#" class="text-gray-500 hover:text-gray-900">Главная</a>
+                <a href="#" class="text-gray-500 hover:text-gray-900">Каталог</a>
+                <a href="#" class="text-gray-500 hover:text-gray-900">Контакты</a>
+            </div>
+            <div class="font-bold">+7(343)999-99-99</div>
+        </nav>
+    </header>
+    <main class="mx-auto max-w-screen-xl">
+        <div class="slider bg-purple-800 mt-6 mx-2.5 pt-7 pb-3.5 px-8 rounded-3xl text-white grid sm:grid-cols-2 md:px-16">
+                <div class="space-y-2 md:space-y-6 lg:pt-14">
+                    <span class="bg-green-300 rounded-full px-6 py-0.5 text-black">Акция</span>
+                    <h2 class="text-3xl font-bold">Две морковки<br>по цене трех!</h2>
+                    <p>Давайте накормим всех<br>кроликов мира вместе!</p>
+                    <!-- кнопка для ПК -->
+                    <button class="hidden sm:block w-64 rounded-full py-2 px-6 bg-black text-white hover:bg-white hover:text-black">ПОКОРМИТЬ</button>
+                </div>
+                <!-- картинка для ПК -->
+                <img class="xl:translate-y-20 md:translate-y-18 sm:translate-y-12 hidden sm:block h-full object-contain object-bottom" style="max-height: 400px" src="img/imd.png" alt="">
+
+
+                <!-- картинка для телефона -->
+                <img class="m-auto h-64 sm:hidden" src="img/imt.png" alt="Морковка">
+            </div>
+            <!-- кнопка для телефона -->
+            <div class="w-full flex justify-center"><button class="sm:hidden px-24 py-3.5 my-3.5 rounded-full bg-black text-white hover:bg-white hover:text-black ">ПОКОРМИТЬ</button></div>
+        <div class="catalog">
+            <h3 class="text-3xl font-bold text-center my-5 sm:text-left sm:px-4">Виды морковок</h3>
+            <div class="font-bold grid mx-5 gap-8 sm:grid-cols-2 lg:grid-cols-4 ">
+
+                <a href="#" class="flex items-end h-60 bg-gray-400 rounded-3xl p-8  border-4 border-gray-400 hover:border-purple-800 hover:bg-white"> Сорт морковки раз</a>
+                <a href="#" class="flex items-end h-60 bg-gray-400 rounded-3xl p-8  border-4 border-gray-400 hover:border-purple-800 hover:bg-white hover:shadow-2xl"> Сорт морковки раз</a>
+                <a href="#" class="lg:col-span-2 flex items-end h-60 bg-gray-400 rounded-3xl p-8  border-4 border-gray-400 hover:border-purple-800 hover:bg-white hover:shadow-2xl"> Сорт морковки раз</a>
+                <a href="#" class="flex items-end h-60 bg-gray-400 rounded-3xl p-8  border-4 border-gray-400 hover:border-purple-800 hover:bg-white hover:shadow-2xl"> Сорт морковки раз</a>
+                <a href="#" class="flex items-end h-60 bg-gray-400 rounded-3xl p-8  border-4 border-gray-400 hover:border-purple-800 hover:bg-white hover:shadow-2xl"> Сорт морковки раз</a>
+                <a href="#" class="lg:col-span-2 flex items-end h-60 bg-gray-400 rounded-3xl p-8  border-4 border-gray-400 hover:border-purple-800 hover:bg-white hover:shadow-2xl"> Сорт морковки раз</a>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-white shadow mt-12">
+        <div class="container mx-auto px-6 py-4">
+            <p class="text-center text-gray-600">© 2024 Ваша компания</p>
+        </div>
+    </footer>
+</body></html>
