@@ -1,0 +1,602 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    color: #222;
+    font: normal 16px sans-serif;
+}
+
+.wrapper {
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    z-index: -99;
+}
+
+.conteiner {
+    max-width: 1024px;
+    align-items: center;
+    padding: 40px 60px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.8;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+
+/*Шапка, содержащая логотип, телефон компании и кнопку для заказа звонка*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+    min-height: 10vh;
+}
+
+.background-image {
+    background-image: url(img/bg.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-color: #2196f3;
+    z-index: -1;
+}
+
+.background-image:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #414a4f;
+    position: absolute;
+    opacity: 0.65;
+}
+
+header h1 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+header span {
+    font: bold 18px 'Open Sans', sans-serif;
+    line-height: 2;
+}
+
+.btn {
+    color: #fff;
+    background: #219fa3;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    padding: 20px;
+    margin: 0 20px;
+}
+
+/*Слоган и кнопка*/
+.hero {
+    min-height: 90vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1 {
+    font: bold 50px 'Open Sans', sans-serif;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font: normal 28px 'Open Sans', sans-serif;
+    margin-bottom: 25px;
+}
+
+
+/*Особенности горящих туров*/
+
+
+.shadow {
+    background: #eee;
+    box-shadow: -20px 0px 25px #eee, 20px 0px 25px #eee;
+    display: flex;
+    flex-direction: column;
+    z-index: -20;
+}
+
+.title {
+    color: #219fa3;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 35px;
+    font: bold 32px 'Open Sans', sans-serif;
+}
+
+.trait {
+    font-size: 28px;
+    color: #219fa3;
+    margin-bottom: 10px;
+    line-height: 2;
+}
+
+.quote {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/*Список горящих туров и фильтр*/
+
+h3 {
+    text-align: center;
+    line-height: 2;
+    color: #219fa3;
+    font-size: 20px;
+}
+
+h4 {
+    text-align: center;
+    line-height: 1.5;
+    color: #3a3a3a;
+    font-size: 18px;
+}
+
+.grid {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.grid div {
+    float: left;
+}
+
+.container__filter {
+    text-align: center;
+}
+
+.container__filter label {
+    min-height: 50px;
+    cursor: pointer;
+    color: #777;
+    font-size: 24px;
+    padding: 0 10px;
+}
+
+.container__filter label:hover {
+    background-color: #eeeeee;
+    border-radius: 5px;
+    color: #000;
+}
+
+input {
+    display: none;
+}
+
+.filter__item img {
+    max-width: 100%;
+    padding: 0 20px;
+}
+
+/*Настройка фильтра*/
+
+
+input[type="radio"]:checked + label {
+    background-color: #eeeeee;
+    border-radius: 5px;
+    color: #000;
+}
+
+input#reset:checked ~ .grid div {
+    flex-basis: 25%;
+}
+
+input#rus:checked ~ .filter__item .ind,
+input#rus:checked ~ .filter__item .kit,
+input#rus:checked ~ .filter__item .vet {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+
+input#ind:checked ~ .filter__item .rus,
+input#ind:checked ~ .filter__item .kit,
+input#ind:checked ~ .filter__item .vet {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+
+input#kit:checked ~ .filter__item .ind,
+input#kit:checked ~ .filter__item .rus,
+input#kit:checked ~ .filter__item .vet {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+
+input#vet:checked ~ .filter__item .ind,
+input#vet:checked ~ .filter__item .kit,
+input#vet:checked ~ .filter__item .rus {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+
+
+/*Консультанты*/
+.ul_grid {
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ul_grid li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 30%;
+}
+
+.manager {
+    background: #eee;
+    text-align: center;
+}
+
+.manager li .img {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+li img {
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 10px;
+    margin-bottom: 10px
+}
+
+.manager li p {
+    align-self: flex-end;
+}
+
+/*Преимущества*/
+.features li {
+    padding: 0 30px;
+    text-align: center;
+    flex-basis: 33%;
+}
+
+.features li i {
+    font-size: 50px;
+    color: #219fa3;
+    margin-bottom: 25px;
+}
+
+/*Слайдер с отзывами*/
+
+/* Первый слайдер
+
+.slider {
+    z-index: 1;
+    padding: 40px 0;    
+    display: flex;
+}
+
+.reviews {
+    width: 100%;
+    display: flex;
+}
+
+.reviews__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    color: white;
+    padding: 0 20px;
+    flex-basis: 25%;
+    transition: all 0.2s;
+}
+
+.reviews__item:hover {
+    flex-basis: 80%;
+}
+
+.slide1,
+.slide3 {
+    background: #414a4f;
+}
+
+.slide2,
+.slide4 {
+    background-color: #219fa3;
+}
+
+/*Второй слайдер*/
+.slider {
+    z-index: 1;
+    padding: 40px 0;
+    position: relative;
+
+    display: flex;
+}
+
+.reviews {
+    background-color: #fff;
+    height: 20vh;
+    width: 95%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+
+.controls label {
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 25px 16px 0;
+    border-radius: 50%;
+    border: 2px solid #999;
+}
+
+.controls label:hover,
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3),
+#slide4:checked ~ .controls label:nth-of-type(4) {
+    background: #999;
+}
+
+.reviews__item {
+    padding: 20px;
+    height: inherit;
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+
+    display: flex;
+}
+
+#slide1:checked ~ .reviews > .slide1,
+#slide2:checked ~ .reviews > .slide2,
+#slide3:checked ~ .reviews > .slide3,
+#slide4:checked ~ .reviews > .slide4 {
+    opacity: 1;
+    z-index: 1;
+}
+
+span {
+    font: 16px 'Open Sans', sans-serif;
+    line-height: 2;
+}
+
+/*О компании и кнопка подбор тура*/
+
+.about form {
+    display: flex;
+    justify-content: center;
+}
+
+.about input {
+    display: block;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 17px;
+    width: 50%;
+}
+
+/*Подвал*/
+.footer {
+    color: white;
+    padding: 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.bg {
+    background-color: #414a4f;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background-size: cover;
+    z-index: -1;
+}
+
+footer ul {
+    width: 50%;
+    list-style: none;
+    font-size: 40px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer p,
+.contact {
+    text-transform: uppercase;
+    font-size: 14;
+    color: white;
+    opacity: 0.6;
+    margin-bottom: 10px;
+}
+
+.contact {
+    width: 80%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button_up {
+    position: fixed;
+    bottom: 20px;
+    left: 92vw;
+}
+
+
+/*Адаптив под телефон*/
+@media all and (min-width : 375px) and (max-width : 767px) {
+
+    .conteiner {
+        padding: 30px;
+    }
+
+    /*    Шапка*/
+    header {
+        flex-direction: column;
+    }
+
+    .tel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .hero {
+        text-align: center;
+        min-height: 68vh;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        margin-top: 80px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    /*    Особенности туров*/
+    .title {
+        margin-bottom: 20px;
+        font-size: 26px;
+    }
+
+    .trait {
+        font-size: 22px;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    .quote {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    /*    Список горящих туров*/
+    input#reset:checked ~ .grid div {
+
+        flex-basis: 50%;
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+
+    /*    Консультанты*/
+    .ul_grid,
+    .ul_grid li {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .manager li img {
+        max-width: 200px;
+        max-height: 200px;
+        margin: 0.5rem;
+    }
+
+    /*Преимущества не надо*/
+
+    /*Слайдер*/
+    /*    Второй слайдер*/
+    .reviews {
+        height: 35vh;
+    }
+
+    /*Первый слайдер*/
+    /*
+    .reviews {
+        flex-direction: column;
+    }
+
+    .reviews__item {
+        padding: 15px 10px;
+    }
+
+    .reviews__item:hover {
+        padding: 70px 10px;
+    }
+*/
+
+    /*    Форма*/
+
+    .about form {
+        flex-direction: column;
+    }
+
+    .about input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /*    Подвал*/
+    .footer {
+        padding-bottom: 0;
+    }
+
+    .bg {
+        height: 30%;
+    }
+
+    .contact {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    footer ul {
+        width: 80%;
+    }
+
+    .button_up {
+        display: none;
+    }
+}

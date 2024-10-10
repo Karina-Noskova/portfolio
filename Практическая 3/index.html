@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- адаптация по ширине-->
+    <link rel="stylesheet" href="style.css">
+    <title>Путешествуй просто</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Шапка, содержащая логотип, телефон компании и кнопку для заказа звонка -->
+        <header class="conteiner">
+            <div class="background-image"></div>
+            <h1><a href="#">Путешествуй просто</a></h1>
+            <div class="tel"><span>8-823-122-45-23</span>
+                <a href="#" class="btn">Заказать звонок</a>
+            </div>
+        </header>
+
+        <!-- Слоган и кнопка -->
+        <div class="conteiner hero">
+            <h1>С нами путешествовать просто</h1>
+            <h2>Мы обо всем позаботились - отдыхайте!</h2>
+            <a href="#" class="btn">Подобрать тур</a>
+        </div>
+
+        <!-- Особенности горящих туров -->
+        <div class="conteiner review shadow">
+            <h2 class="title">Особенности горящих туров</h2>
+            <p class="trait">— Низкая цена</p>
+            <p class="quote">
+                Не все туристы имеют возможность заранее спланировать поездку. Иногда решение об отпуске принимается спонтанно, и времени на подготовку путешествия попросту не остается.
+            </p>
+            <p class="trait">— Возможность отправиться в поездку немедленно</p>
+            <p class="quote">
+                Между покупкой турпакета и непосредственным путешествием проходит совсем мало времени. Таким образом, туристу не приходится томиться в ожидании поездки, а можно наслаждаться отдыхом и новыми впечатлениями практически сразу.
+            </p>
+            <p class="trait">— Отсутствие возможности выбора</p>
+            <p class="quote">
+                Определенного типа отеля, даты и времени вылета самолета, а также количества дней, которые можно будет провести на отдыхе в другой стране. Это связано с тем, что предлагаемый горящий тур уже предварительно скомплектован туроператором и не подлежит изменению.
+            </p>
+        </div>
+
+        <!-- Список горящих туров и фильтр -->
+        <div class="conteiner product">
+            <h2 class="title">Горящие туры по направлениям</h2>
+            <div class="container__filter">
+
+                <input type="radio" name="filter" id="reset" checked>
+                <label for="reset">Все направления</label>
+
+                <input type="radio" name="filter" id="rus">
+                <label for="rus">Россия</label>
+
+                <input type="radio" name="filter" id="ind">
+                <label for="ind">Индонезия</label>
+
+                <input type="radio" name="filter" id="kit">
+                <label for="kit">Китай</label>
+
+                <input type="radio" name="filter" id="vet">
+                <label for="vet">Вьетнам</label>
+
+                <div class="grid filter__item">
+                    <div class="rus">
+                        <img src="img/%D0%90%D0%B4%D0%BB%D0%B5%D1%80.jpg" alt="Россия">
+                        <h3>Адлер</h3>
+                        <h4>28600 руб.</h4>
+                        <p>Россия</p>
+                    </div>
+                    <div class="rus">
+                        <img src="img/%D0%91%D0%B5%D0%BB%D0%BE%D0%BA%D1%83%D1%80%D0%B8%D1%85%D0%B0.jpg" alt="Россия">
+                        <h3>Белокуриха</h3>
+                        <h4>58750 руб.</h4>
+                        <p>Россия</p>
+                    </div>
+
+                    <div class="ind">
+                        <img src="img/%D0%91%D0%B0%D0%BB%D0%B8.jpg" alt="Индонезия">
+                        <h3>Бали</h3>
+                        <h4>88600 руб.</h4>
+                        <p>Индонезия</p>
+                    </div>
+                    <div class="ind">
+                        <img src="img/%D0%9A%D1%83%D1%82%D0%B0.jpg" alt="Индонезия">
+                        <h3>Кута</h3>
+                        <h4>81666 руб.</h4>
+                        <p>Индонезия</p>
+                    </div>
+
+                    <div class="kit">
+                        <img src="img/%D0%A1%D0%B0%D0%BD%D1%8C%D1%8F.jpg" alt="Китай">
+                        <h3>Санья</h3>
+                        <h4>38600 руб.</h4>
+                        <p>Китай</p>
+                    </div>
+                    <div class="kit">
+                        <img src="img/%D0%BE.%D0%A5%D0%B0%D0%B9%D0%BD%D0%B0%D0%BD%D1%8C.jpg" alt="Китай">
+                        <h3>о.Хайнань</h3>
+                        <h4>48750 руб.</h4>
+                        <p>Китай</p>
+                    </div>
+
+                    <div class="vet">
+                        <img src="img/%D0%9D%D1%8F%D0%BD%D1%87%D0%B0%D0%BD%D0%B3.jpg" alt="Вьетнам">
+                        <h3>Нянчанг</h3>
+                        <h4>32600 руб.</h4>
+                        <p>Вьетнам</p>
+                    </div>
+                    <div class="vet">
+                        <img src="img/%D0%94%D0%BE%D0%BC%D0%B1%D0%B0%D0%B9.jpg" alt="Вьетнам">
+                        <h3>Домбай</h3>
+                        <h4>42800 руб.</h4>
+                        <p>Вьетнам</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Консультанты -->
+        <div class="conteiner manager shadow">
+            <h2 class="title">Наши консультанты</h2>
+            <p class="quote">У нас работают профессионалы с огромным опытом. Мы заботимся, о том, чтобы вы хорошо отдохнули.</p>
+            <ul class="ul_grid">
+                <li>
+                    <div class="img"> <img src="img/manager_1.jpg" alt=""></div>
+                    <p>Светлана Астахова - менеджер по туризму</p>
+                </li>
+                <li>
+                    <div class="img"><img src="img/manager_2.jpg" alt=""></div>
+                    <p> Мария Иванова - менеджер по туризму</p>
+                </li>
+                <li>
+                    <div class="img"><img src="img/manager_3.jpg" alt=""></div>
+                    <p>Олеся Михайлова - менеджер по туризму</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Преимущества -->
+        <div class="conteiner features">
+            <h2 class="title">Наши преимущества</h2>
+            <p class="quote">Лучший онлайн поиск туров с вылетом из Томска.</p>
+            <ul class="ul_grid">
+                <li>
+                    <i class="fa fa-file-text-o "></i>
+                    <p>Надёжность, гарантированная честным договором с туристами!</p>
+                </li>
+                <li>
+                    <i class="fa fa-list-alt"></i>
+                    <p>Максимальные скидки по всем операторам. Огромный выбор туров.</p>
+                </li>
+                <li>
+                    <i class="fa fa-plane"></i>
+                    <p> Покупка авиабилетов в любую точку мира!</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Слайдер с отзывами -->
+        <div class="conteiner slider shadow">
+            <h2 class="title">Отзывы</h2>
+            <input type="radio" name="point" id="slide1" checked>
+            <input type="radio" name="point" id="slide2">
+            <input type="radio" name="point" id="slide3">
+            <input type="radio" name="point" id="slide4">
+            <div class="reviews">
+                <div class="reviews__item slide1">
+                    <span>
+                        Отдыхали в Тайланде с 15.10.19г. От данной турфирмы. Отдых получился отличный, с погодой угадали, без дождей. СПАСИБО!!!!
+                    </span>
+                </div>
+                <div class="reviews__item slide2">
+                    <span>
+                        Благодарны очень за организацию тура в Таиланд менеджеру Наталье. Информацию предоставила в полном объеме, доброжелательная, активная, оперативно были выполнены все наши пожелания.
+                    </span>
+                </div>
+                <div class="reviews__item slide3">
+                    <span>
+                        Хочу выразить огромную благодарность Наталье. Спасибо огромное за наш прекрасный отпуск!!! Спасибо за выбор страны и отеля!!!Мы довольны)))
+                    </span>
+                </div>
+                <div class="reviews__item slide4">
+                    <span>
+                        С 16 по 27 октября отдыхали в Таиланде, Паттайе, отеле "Амбассадор Сити". Выражаю огромную благодарность менеджеру Ольге Бельской за удачно подобранный тур: удобное время вылета, превосходный отель, чудесный пляж.</span>
+                </div>
+            </div>
+            <div class="controls">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+                <label for="slide4"></label>
+            </div>
+        </div>
+
+        <!-- О компании и кнопка подбор тура -->
+        <div class="conteiner about">
+            <h2 class="title">Заявка на подбор тура</h2>
+            <p class="quote">
+                Наша компания создана для Вашего комфорта. Мы сделали выбор и покупку тура максимально удобным для Вас. В нашем поиске можно найти путешествия от 80-ти туроператоров. Оплата туров происходит через защищенные каналы связи Сбербанка. Если Вам понадобится помощь специалиста в подборе тура, наши менеджеры всегда, с радостью подберут путешествие по Вашим запросам и будут с Вами на связи на протяжении всего отдыха. Покупая тур в нашей компании, Вы не платите никаких дополнительных комиссий и сборов, Вы бронируете тур по цене туроператора.
+            </p>
+            <form action="#">
+                <input type="email" placeholder="Email" required>
+                <a href="#" class="btn">Подобрать тур</a>
+            </form>
+        </div>
+
+        <!-- Подвал -->
+        <footer class="conteiner footer">
+            <div class="bg"></div>
+            <div class="contact">
+                <span>г. Томск, ул.Фрунце 39</span>
+                <span>Тел: 8-823-122-45-23</span>
+                <span>Email: tourTomsk@ya.ru</span>
+            </div>
+
+            <ul>
+                <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                <li><a href="#"><i class="fa fa-snapchat-square"></i></a></li>
+                <li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
+                <li><a href="#"><i class="fa fa-github-square"></i></a></li>
+            </ul>
+            <p>Сайт разработал ООО супер групп</p>
+
+            <div class="button_up"><a href="#" title="Вверх"><img src="img/up.png"></a></div>
+        </footer>
+    </div>
+</body></html>
